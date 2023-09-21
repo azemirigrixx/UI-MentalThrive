@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mental Thrive</title>
+</head>
+<body>
+    <h1> MENTAL THRIVE </h1>
+    <form method="POST">
+        <label for="idnumber"> ID Number </label>
+        <input type="text" id="idnumber" name="idnumber" required><br>
+
+        <label for="studentname"> Student Name </label>
+        <input type="text" id="studentname" name="studentname" required><br>
+
+        <label for="birthdate"> Birth Date (Day/Month/Year)</label>
+        <input type="text" id="birthdate" name="birthdate" required><br>
+
+        <label for="email"> Phinma Email </label>
+        <input type="text" id="email" name="email" required><br>
+        <input type="submit" value="Get Started">
+    </form>
+
+    {% if error_message %}
+    <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
+</body>
+</html>
+
