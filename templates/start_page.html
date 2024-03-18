@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <style>
+        .custom-btn-primary{
+            background-color:rgb(255, 255, 142); 
+            color:black;
+            border: none;
+            transition: background-color 0.3s ease; 
+        }
+
+        .custom-btn-primary:hover{
+            background-color:#fd6aa0;
+        }
+
+        .img-fluid{
+            max-width: 35%; 
+            max-height: 35%; 
+            margin-top: -18vh;
+        }
+    </style>
+    <title>Starting page</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 landscape d-flex flex-column align-items-center justify-content-center" style="height: 100vh; background: linear-gradient(rgb(144, 179, 89), rgb(226, 236, 139));">
+                <img src="{{ url_for('static', filename='startpage_avo.png') }}" alt="Our avocado" class="img-fluid mb-3">
+                <div class="text-center" style="color: #4f4848; margin-top: -2vh">
+                    <p class="fs-3 fw-bold">
+                        Student Mental Health<br>
+                        Awareness Checker and Counsel<br>
+                        Scheduler System
+                    </p>
+                    <div class="d-grid gap-2 col-10 col-md-6 mx-auto">
+                        <a href="{{ url_for('goto_counselor_login') }}" class="btn custom-btn-primary btn-lg mt-3 fw-bold">COUNSELOR</a>
+                        <a href="{{ url_for('goto_student_login') }}" class="btn custom-btn-primary btn-lg mt-3 fw-bold" >STUDENT<br></a>
+                        <a href="{{ url_for('goto_administration_login')}}" class="btn custom-btn-primary btn-lg mt-3 fw-bold" >ADMINISTRATION<br></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
